@@ -19,4 +19,6 @@ spec:
       - name: debug
         image: dockerdevops1994/debug:v1
         imagePullPolicy: Always
+        command: ["sleep","100000"]
+      
 
