@@ -120,8 +120,9 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: web-mount
-          mountPath: /etc/nginx/nginx.conf
+          mountPath: /etc/nginx/
           subPath: nginx.conf
+          readOnly: true
       volumes:
       - name: web-mount
         configMap:
