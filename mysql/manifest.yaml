@@ -11,6 +11,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: mysql-secret
+  namespace: roboshop
 type: Opaque
 data:
   MYSQL_ROOT_PASSWORD: Um9ib1Nob3BAMQ==
