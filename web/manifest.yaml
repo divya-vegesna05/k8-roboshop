@@ -25,6 +25,17 @@ spec:
       - name: web
         image: dockerdevops1994/web:v1
         imagePullPolicy: Always
+        volumeMounts:
+        - name: web-mount
+          mountPath: /etc/nginx
+          subPath: nginx.conf
+      volumes:
+      - name: web-mount
+        configMap:
+          name: web-config
+          items:
+            - key: nginx.conf
+              value: nginx.conf
 ---
 apiVersion: v1
 kind: Service
