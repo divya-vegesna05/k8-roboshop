@@ -11,9 +11,9 @@ spec:
   replicas: 3
   selector:
     matchLabels: 
-    app: catalogue
-    project: roboshop
-    tier: app
+      app: catalogue
+      project: roboshop
+      tier: app
   template:
     metadata:
       labels:
